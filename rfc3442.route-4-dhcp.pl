@@ -45,14 +45,14 @@ foreach (@ARGV) {
 
             $aggregate .= sprintf("%s%s%s", $networklen, $destination, $router);
 
-            printf(
-                "opt121_r_%s_via_%s : 0x%s%s%s\n",
-                $net, $gw, $networklen, $destination, $router
-            );
-            printf(
-                "opt249_r_%s_via_%s : 0x%s%s%s\n",
-                $net, $gw, $networklen, $destination, $router
-            );
+            # printf(
+            #     "opt121_r_%s_via_%s : 0x%s%s%s\n",
+            #     $net, $gw, $networklen, $destination, $router
+            # );
+            # printf(
+            #     "opt249_r_%s_via_%s : 0x%s%s%s\n",
+            #     $net, $gw, $networklen, $destination, $router
+            # );
             # printf(
             #     "/ip dhcp-server option add code=121 name=opt121_r_%s_via_%s value=0x%s%s%s\n",
             #     $net, $gw, $networklen, $destination, $router
@@ -72,8 +72,8 @@ foreach (@ARGV) {
 }
 
 if ($aggregate ne '') {
-    printf("aggregate_opt121 : 0x%s\n", $aggregate);
-    printf("aggregate_opt249 : 0x%s\n", $aggregate);
+    # printf("aggregate_opt121 : 0x%s\n", $aggregate);
+    # printf("aggregate_opt249 : 0x%s\n", $aggregate);
     printf("/ip dhcp-server option add code=121 name=aggr_opt121 value=0x%s\n", $aggregate);
     printf("/ip dhcp-server option add code=249 name=aggr_opt249 value=0x%s\n", $aggregate);
     say("/ip dhcp-server option sets add name=set_121_249 options=aggr_opt121,aggr_opt249");

@@ -34,5 +34,8 @@ Sample use
     aggregate_opt_121 : 0x080ac0a858020cac10c0a8580210c0a8c0a8580200c0a85801
     aggregate_opt_249 : 0x080ac0a858020cac10c0a8580210c0a8c0a8580200c0a85801
 
+```
+./rfc3442.route-4-dhcp.pl $(egrep -v "^$|^#" networks.txt | while read line; do echo -n "$line "; done)
+```
 See more http://oldengremlin.blogspot.com/2016/10/routeros-dhcp.html
 
