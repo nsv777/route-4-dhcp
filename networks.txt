@@ -1,4 +1,4 @@
-# Looks like routeros has a limit to classless routes - it must be less that 31
+# Looks like routeros has a limit to classless routes number - it must be less than 32
 # So have to merge separate routes using larger mask
 
 10.10.1.0/24 192.168.21.21
